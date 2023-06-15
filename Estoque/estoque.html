@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Estoque de equipamentos</title>
+  <link rel="stylesheet" type="text/css" href="estoque.css">
+</head>
+
+<body>
+<div class="Estoque de equipamentos">
+    <h2>Estoque</h2>
+    <table>
+      <tr>
+        <th>Equipamento</th>
+        <th>Quantidade</th>
+        <th>N/S</th>
+      </tr>
+
+      <!-- Os dados do estoque serão preenchidos dinamicamente usando PHP -->
+      <?php
+      // Conexão com o banco de dados
+      $conn = new mysqli('localhost', 'seu_usuario', 'sua_senha', 'controle_estoque');
+
+      // Verificar a conexão
+      if ($conn->connect_error) {
+        die("Falha na conexão com o banco de dados: " . $conn->connect_error);
+      }
+
+      // Consultar o estoque
+      $sql = "SELECT * FROM equipamentos";
+      $result = $conn->query($sql);
+
+      // Exibir os dados do estoque na tabela
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          echo "<tr>";
+          echo "<td>" . $row['nome'] . "</td>";
+          echo "<td>" . $row['quantidade'] . "</td>";
+          echo "<td>" . $row['serie'] . "</td>";
+          echo "</tr>";
+        }
+      }
+
+      // Fechar a conexão com o banco de dados
+      $conn->close();
+      ?>
+    </table>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Login</title> <!--Titulo-->
+</head> 
+
+<body>
+
+    <section class="area-login"> <!--Começo da seção "area-login"-->
+
+        <div class="login">
+            <h1>CONTROLE DE EQUIPAMENTOS</h1>
+            <br />
+            <br />
+            <br />
+            <br /> <!--Titulo do controle-->
+
+            <div class="logo-usuario"> <!--Logo do usuário-->
+                <img src="/img/user-icon-4.png">
+            </div> <!--Logo do usuário-->
+
+        <form>
+            <label for="nome" class="user">Usuário:</label>
+            <input type="text" placeholder="Usuário" id="login" autofocus>
+            <label for="password" class="passwd">Senha:</label>
+            <input type="password" placeholder="Senha" id="senha" autofocus>
+            <div id="icon" onclick="showhide()" title="Mostrar senha"></div>
+            <script type="text/javascript" src="login.js"></script> <!--Script mostrar senha-->
+            <input type="submit" value="Entrar" formaction="/Dashboard/dashboard.html" title="Acessar">
+        </form>
+        </div> <!--Abas de formulário e botão de Login-->
+
+        <div class="logo-port">
+            <a href = "https://www.portinfo.com.br/" target="_blank">
+                <img src="/img/logo-port.png" alt="Logo da Port" width="150px" title="Clique para ir ao site">
+            </a>
+        </div> <!--Fim Div do Logo PORT-->
+
+    </section> <!--Fim da seção "area-login"-->  
+
+</body> <!--Fim do corpo da página-->
+
+</html>

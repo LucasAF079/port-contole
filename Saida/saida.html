@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Saída de equipamentos</title>
+  <link rel="stylesheet" type="text/css" href="saida.css">
+</head>
+
+<body>
+    <form action="saida.php" method="POST">
+        <h2>Saída de Equipamentos</h2>
+        <label for="saida_nome"></label>
+        <input type="text" placeholder="Nome do Equipamento:" id="saida_nome" name="saida_nome" required>
+    
+        <label for="saida_quantidade"></label>
+        <input type="number" placeholder="Quantidade:" id="saida_quantidade" name="saida_quantidade" required>
+    
+        <label for="numero_serie"></label>
+        <input type="serie" placeholder="N/S:" id="numero_serie" name="numero_serie" required>
+    
+        <input type="submit" value="Registrar Saída">
+      </form>
+</body>
+</html>

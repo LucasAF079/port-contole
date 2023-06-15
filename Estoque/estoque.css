@@ -1,0 +1,18 @@
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 20px;
+    background-color: #EEEEEE;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+th, td {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+  
+th {
+    background-color: #f2f2f2;
+}
